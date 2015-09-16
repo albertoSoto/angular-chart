@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+   <title></title>
+   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+   <link href="bower_components/ng-table/dist/ng-table.min.css" rel="stylesheet">
+</head>
+<body class="container-fluid" ng-app="appTable">
+<div class="row">
+   <div class="col-md-6" ng-controller="urlController">
+      <h2>URL example</h2>
+      <div ng-repeat="user in users">
+         {{user.fname}} {{user.lname}}
+      </div>
+   </div>
+
+   <div class="col-md-6" ng-controller="objController">
+      <h2>JSON Object example</h2>
+      <table>
+         <tr ng-repeat="user in users">
+            <td>{{user.fname}}</td>
+            <td>{{user.lname}}</td>
+            <td>{{user.tel}}</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="row">
+   <div class="col-md-7">
+      <div  ng-controller="DemoController">
+         <!--table ng-table-dynamic="demo.tableParams with demo.cols" show-filter="true"
+                class="table table-bordered table-striped">
+            <tr ng-repeat="row in $data track by row.id">
+               <td ng-repeat="col in $columns">{{::row[col.field]}}</td>
+            </tr>
+         </table-->
+         <!--table ng-table="vm.tableParams" class="table" show-filter="true">
+            <tr ng-repeat="user in $data">
+               <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+                  {{user.name}}</td>
+               <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
+                  {{user.age}}</td>
+            </tr>
+         </table-->
+         <table ng-table="tableParams" class="table">
+            <tr ng-repeat="user in users">
+               <td data-title="'UserName'" sortable="username">
+                  {{user.username}}
+               </td>
+               <td data-title="'Email'" sortable="email">
+                  {{user.email}}
+               </td>
+            </tr>
+         </table>
+      </div>
+   </div>
+   <div class="col-md-5 ">
+      yeah
+   </div>
+</div>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="bower_components/angular-underscore-module/angular-underscore-module.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/ng-table/dist/ng-table.min.js"></script>
+<script type="text/javascript" src="lib/app.ngtable.js"></script>
+</body>
+</html>
