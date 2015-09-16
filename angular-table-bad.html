@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+   <title></title>
+   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+   <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="bower_components/at-table/dist/angular-table.min.js"></script>
+   <script type="text/javascript" src="lib/app.table.js"></script>
+</head>
+<body class="container-fluid" ng-app="myAppTable" ng-controller="interactiveExampleCtrl">
+<div class="row">
+   <div class="col-md-7">
+      <table class="table table-striped" at-table at-list="tableData" at-config="config">
+         <thead></thead>
+         <tbody>
+         <tr>
+            <td at-implicit at-attribute="name" width="250">
+            </td>
+         </tr>
+         </tbody>
+      </table>
+      <!--at-pagination at-list="filteredList" at-config="config"></at-pagination-->
+   </div>
+   <div class="col-md-5 ">
+      <!--ng-binding <h4>Add</h4>
+       <div class="input-group col-lg-6">
+          <input type="text" class="form-control ng-pristine ng-valid" ng-model="nameToAdd">
+         <span class="input-group-btn">
+           <button class="btn btn-default btn-success" type="button" ng-click="add()">Add</button>
+         </span>
+       </div>
+       <h4>Filter</h4>
+       <input type="text" class="form-control ng-pristine ng-valid" ng-model="query" ng-change="updateFilteredList()">
+       <h4>$scope.itemsPerPage</h4>
+       <select ng-model="config.itemsPerPage" class="form-control ng-pristine ng-valid">
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="9">9</option>
+       </select>
+       <h4>$scope.maxPages</h4>
+       <select ng-model="config.maxPages" class="form-control ng-pristine ng-valid">
+          <option value="1">1</option>
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="9">9</option>
+       </select>
+       <h4>$scope.fillLastPage</h4>
+       <select ng-model="config.fillLastPage" class="form-control ng-pristine ng-valid">
+          <option value="yes">yes</option>
+          <option value="no">no</option>
+       </select>
+       <br>
+       {"itemsPerPage":5,"maxPages":5,"fillLastPage":"yes","currentPage":0}-->
+   </div>
+</div>
+
+</body>
+</html>
