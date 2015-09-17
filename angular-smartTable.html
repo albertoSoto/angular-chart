@@ -17,7 +17,7 @@
             <th>first name</th>
             <th>last name</th>
             <th>balance</th>
-            <th>email</th>
+            
          </tr>
          </thead>
          <tbody>
@@ -25,12 +25,42 @@
             <td>{{row.firstName}}</td>
             <td>{{row.lastName}}</td>
             <td>{{row.balance}}</td>
-            <td>{{row.email}}</td>
+            <td>
+               <button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+                  <i class="glyphicon glyphicon-remove-circle">
+                  </i>
+               </button>
+            </td>
          </tr>
          </tbody>
       </table>
    </div>
    <div class="col-md-4">
+      <form class="form-horizontal">
+         <div class="form-group">
+            <label for="input_name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+               <input id="input_name" class="form-control" ng-model="newData.firstName"/>
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="input_lastName" class="col-sm-2 control-label">lastName</label>
+            <div class="col-sm-10">
+               <input id="input_lastName" class="form-control" ng-model="newData.lastName"/>
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="input_balance" class="col-sm-2 control-label">balance</label>
+            <div class="col-sm-10">
+               <input id="input_balance" class="form-control" ng-model="newData.balance"/>
+               <button type="button" ng-click="addRandomItem(row)" class="btn btn-sm btn-success">
+                  <i class="glyphicon glyphicon-plus">
+                  </i> Add random item
+               </button>
+            </div>
+
+         </div>
+      </form>
 
    </div>
 </div>
